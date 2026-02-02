@@ -47,7 +47,7 @@ exports.protect = async (req, res, next) => {
   }
 };
 
-// Admin authorization
+// Admin authorization (to check admin)
 exports.authorize = (...roles) => {
   return (req, res, next) => {
     if (!roles.includes(req.user.role)) {
